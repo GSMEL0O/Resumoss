@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Resumos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Banco de Resumos</h1>
+
+    <div id="auth">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" required>
+            <button type="submit">Login</button>
+            <p id="login-message"></p>
+        </form>
+        <button id="logout-button" style="display: none;">Logout</button>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h2>Compartilhe seus Resumos</h2>
+        <form id="summary-form">
+            <label for="subject">Matéria:</label>
+            <select id="subject" required>
+                <option value="">Selecione a matéria</option>
+                <option value="Matematica">Matemática</option>
+                <option value="Portugues">Português</option>
+                <option value="Ciencias">Ciências</option>
+                <option value="Historia">História</option>
+                <option value="Geografia">Geografia</option>
+                <option value="Ingles">Inglês</option>
+            </select>
+            
+            <label for="year">Ano:</label>
+            <select id="year" required>
+                <option value="">Selecione o ano</option>
+                <option value="6">6º Ano</option>
+                <option value="7">7º Ano</option>
+                <option value="8">8º Ano</option>
+                <option value="9">9º Ano</option>
+            </select>
+            
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" required>
+            
+            <label for="summary">Descrição do Resumo:</label>
+            <textarea id="summary" rows="5" required></textarea>
+            
+            <label for="file-upload">Faça o upload de um arquivo:</label>
+            <input type="file" id="file-upload">
+
+            <button type="submit">Adicionar Resumo</button>
+        </form>
+        
+        <h2>Resumos Compartilhados</h2>
+        <label for="search">Buscar por matéria:</label>
+        <input type="text" id="search" placeholder="Digite a matéria para buscar">
+        
+        <label for="search-year">Selecionar ano da matéria:</label>
+        <select id="search-year">
+            <option value="">Selecione o ano</option>
+            <option value="6">6º Ano</option>
+            <option value="7">7º Ano</option>
+            <option value="8">8º Ano</option>
+            <option value="9">9º Ano</option>
+        </select>
+
+        <div id="summary-list">
+            <!-- Os resumos serão exibidos aqui -->
+        </div>
+    </div>
+
+
+    <p>Feito por Gabriel Melo</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
